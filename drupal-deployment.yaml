@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drupal-deployment
+  labels:
+    app: drupal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drupal
+  template:
+    metadata:
+      labels:
+        app: drupal
+        tier: frontend
+    spec:
+      containers:
+        - name: drupal
+          image: drupal:latest
+          ports:
+            - containerPort: 30080
+              name: drupal
+          volumeMounts:
+            - name: drupal
+              mountPath: /var/www/html/modules
+              subPath: modules
+            - name: drupal
+              mountPath: /var/www/html/profiles
+              subPath: profiles
+            - name: drupal
+              mountPath: /var/www/html/themes
+              subPath: themes
+      volumes:
+        - name: drupal
+          persistentVolumeClaim:
+            claimName: drupal-claim
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: drupal
+spec:
+  selector:
+    app: drupal
+    tier: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      nodePort: 30080
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: drupal-claim
+  labels:
+    app: drupal
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
