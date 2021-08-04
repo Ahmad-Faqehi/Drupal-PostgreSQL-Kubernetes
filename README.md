@@ -78,15 +78,15 @@ Database Password: 123456
 ![Screen Shot](screenshots/2.jpg)
 
 
-* []() Here should enter the `local ip` for your system  <br>
+* []() Here should enter the `local ip` for your system for Host field <br>
 ![Screen Shot](screenshots/3.jpg)
 
 
 
-* []() Dashboard Elements Page <br>
+* []() If the data is correct, the installation process will be start <br>
 ![Screen Shot](screenshots/4.jpg)
 
-* []() Dashboard Evaluation Page <br>
+* []() Drupal Home Page <br>
 ![Screen Shot](screenshots/5.jpg)
 
 
