@@ -65,8 +65,8 @@ localhost:30080
 the login info for Postgres is
 ```shell
 Database Name: postgresdb
-Database Username: admin
-Database Password: 123456
+Database Username: postgresadmin
+Database Password: admin123
 ```
 
 
