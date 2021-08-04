@@ -11,7 +11,7 @@
   <h3 align="center"> Deploy PostgreSQL and Drupal by using Kubernetes </h3>
 
 
-![Screen Shot](Screenshots/kubernetes-horizontal-color.png)
+![Screen Shot](screenshots/kubernetes-horizontal-color.png)
 
   <p align="center">
 This yml files will setup a Drupal site using Kubernetes and Postgres
@@ -52,7 +52,7 @@ kubectl get all
 
 Once all pod are running we need to know the IP address of our Drupal.
 * []() All running <br>
-![Screen Shot](Screenshots/1.jpg)
+![Screen Shot](screenshots/1.jpg)
 
 <Br/>
 open your localhost ip with port 30080
@@ -75,19 +75,19 @@ Database Password: 123456
 
 
 * []() Setup Page for drupal <br>
-![Screen Shot](Screenshots/2.jpg)
+![Screen Shot](screenshots/2.jpg)
 
 
 * []() Here should enter the `local ip` for your system  <br>
-![Screen Shot](Screenshots/3.jpg)
+![Screen Shot](screenshots/3.jpg)
 
 
 
 * []() Dashboard Elements Page <br>
-![Screen Shot](Screenshots/4.jpg)
+![Screen Shot](screenshots/4.jpg)
 
 * []() Dashboard Evaluation Page <br>
-![Screen Shot](Screenshots/5.jpg)
+![Screen Shot](screenshots/5.jpg)
 
 
 
