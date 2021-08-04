@@ -37,6 +37,7 @@ Either run this commands listed in it:
 ```shell
 kubectl apply -f local-volumes.yaml
 kubectl apply -f drupal-deployment.yaml
+kubectl apply -f postgres-configmap.yaml
 kubectl apply -f postgres-storage.yaml
 kubectl apply -f postgres-deployment.yaml
 kubectl apply -f postgres-service.yaml
