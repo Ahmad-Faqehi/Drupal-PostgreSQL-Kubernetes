@@ -40,14 +40,17 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: drupal
+  name: drupal-service
 spec:
   selector:
     app: drupal
     tier: frontend
+  type: NodePort
   ports:
-    - protocol: TCP
+    - name: phpmyadmin
       port: 80
+      protocol: TCP
+      targetPort: 80
       nodePort: 30080
 
 ---
